@@ -1,0 +1,15 @@
+{
+  "name": "smkaswaja",
+  "private": false,
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {},
+  "version": "1.0.0",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
