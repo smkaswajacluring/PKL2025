@@ -17,8 +17,8 @@
   <link rel="icon" type="image/png" sizes="64x64" href="https://smkaswajacluring.github.io/PKL2025/assets/images/LOGO.png">
   <link rel="apple-touch-icon" sizes="180x180" href="https://smkaswajacluring.github.io/PKL2025/assets/images/LOGO.png">
 
-  <link rel="stylesheet" href="https://smkaswajacluring.github.io/PKL2025/node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://smkaswajacluring.github.io/PKL2025/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://smkaswajacluring.github.io/PKL2025/vendor/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://smkaswajacluring.github.io/PKL2025/vendor/@fortawesome/fontawesome-free/css/all.min.css">
 
   <style type="text/css">
     * {
@@ -117,15 +117,10 @@
   <div>
     <div class="container">
       <div class="dropdown mt-2">
-        <button class="btn btn-dark dropdown-toggle w-100" type="button" id="dropdownMenuButton1"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          PILIH TIPE INFORMASI
-        </button>
+        <button class="btn btn-dark dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">PILIH TIPE INFORMASI</button>
         <ul class="dropdown-menu shadow" aria-labelledby="dropdownMenuButton1">
           <li><a class="dropdown-item">PENGISIAN FORMULIR</a></li>
-          <li>
-            <hr>
-          </li>
+          <li><hr></li>
           <li><a class="dropdown-item">RAIHAN SUHARTONO</a></li>
           <li><a class="dropdown-item">MUHAMMAD ROFIQ NUR FAJRI</a></li>
           <li><a class="dropdown-item">MARCHELO DIMAS SAPUTRA</a></li>
@@ -134,9 +129,7 @@
           <li><a class="dropdown-item">BAYU TIRTA ARUM</a></li>
           <li><a class="dropdown-item">AHMAD TRIO RAMA DHANI</a></li>
           <li><a class="dropdown-item">AGUS HAYDAR ALI</a></li>
-          <li>
-            <hr>
-          </li>
+          <li><hr></li>
           <li><a class="dropdown-item">REKAP TOTAL</a></li>
         </ul>
       </div>
@@ -159,15 +152,15 @@
         </div>
 
         <div class="row" id="data-container">
-          <!--  -->
+
         </div>
       </div>
     </div>
   </div>
 
-  <script src="https://smkaswajacluring.github.io/PKL2025/node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="https://smkaswajacluring.github.io/PKL2025/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-  <script src="https://smkaswajacluring.github.io/PKL2025/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://smkaswajacluring.github.io/PKL2025/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="https://smkaswajacluring.github.io/PKL2025/vendor/@popperjs/core/dist/umd/popper.min.js"></script>
+  <script src="https://smkaswajacluring.github.io/PKL2025/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
   <script type="text/javascript">
     const container = document.getElementById('data-container');
@@ -181,7 +174,6 @@
 
       dataRows.forEach(line => {
         const cells = line.split(',');
-        console.log(cells.length);
         if (cells.length >= 8) {
           const cleanedCells = cells.map(cell => cell.trim());
           records.push(cleanedCells);
@@ -256,7 +248,6 @@
 
       } catch (error) {
         $("#loading").hide();
-        console.error('Gagal mengambil atau memproses data:', error);
         container.innerHTML = `<p class="loading" style="color:red;">Gagal memuat data. Pesan: ${error.message}</p>`;
       }
     }
@@ -298,7 +289,6 @@
         }
 
         $("#data-title").html(name);
-        console.log(data_url[name], data_gid[name]);
         fetchAndRenderData(data_url[name], data_gid[name]);
       });
     });
@@ -310,7 +300,6 @@
       const name = "REKAP TOTAL";
 
       $("#data-title").html(name);
-      console.log(data_url[name], data_gid[name]);
       fetchAndRenderData(data_url[name], data_gid[name]);
     });
   </script>
