@@ -119,6 +119,7 @@
       <div class="dropdown mt-2">
         <button class="btn btn-dark dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">PILIH TIPE INFORMASI</button>
         <ul class="dropdown-menu shadow" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item">ABSENSI</a></li>
           <li><a class="dropdown-item">PENGISIAN FORMULIR</a></li>
           <li><hr></li>
           <li><a class="dropdown-item">RAIHAN SUHARTONO</a></li>
@@ -283,8 +284,13 @@
         container.innerHTML = "";
         const name = $(this).html();
 
+        if (name == "ABSENSI") {
+          window.location.href = "https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vTWO3G4cYnvIZbVVMakXv84wcPHWXrAMtrewTmLHKSjbrT_ichG6oWsKINGX1jNyWlUR87jbslkrEh_/pubhtml?gid=328412591&single=true";
+          return;
+        }
+
         if (name == "PENGISIAN FORMULIR") {
-          window.location.href = "https://forms.gle/vjTWf9V5q8vbKb539";
+          window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScZjIWi6q4z4mReCKJO9KU-D5nJpaSfwqi5O5ZEdzO_rMi7Ag/viewform?usp=header";
           return;
         }
 
